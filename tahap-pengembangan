@@ -10,41 +10,9 @@ intents.message_content = True
 # Prefix command untuk bot
 bot = commands.Bot(command_prefix='$', intents=intents)
 
-emoji_list = [
-    "😀", "😂", "🤣", "😍", "🥰", "😎", "🤔", 
-    "😴", "🤖", "👻", "🦄", "🌟", "🔥", "🎉",
-    "🍕", "☕", "🏆", "🎮", "🚀"
-]
-
 @bot.event
 async def on_ready():
     print(f'We have logged in as {bot.user}')
-
-@bot.command()
-async def Fungsi(ctx):
-    await ctx.send(
-        """1. $Halo.
-2. $Goodbye.
-3. $Apalah.
-4. $Passgen. Dapat melakukan custom password = "$Passgen 11(angka)" maka hasilnya = !@#>-+=*^!?(11 angka password)
-5. $Menambahkan. Contohnya : "$Menambahkan 1(angka) 2(angka)" maka hasilnya = 3(tiga)
-6. $Dadu.
-7. $Ulang.
-8. $Emoji.
-9. $Koin.
-10. $Fungsi_Rahasia.
-
-Note:
-Cara menggunakan "$Ulang" contohnya = $Ulang 3(angka) Halo(huruf/kata)
-Maka yang muncul adalah:
-Halo
-Halo
-Halo"""
-    )
-
-@bot.command()
-async def Fungsi_Rahasia(ctx):
-    await ctx.send(f"Ketik : $ChatGPT")
 
 @bot.command()
 async def Halo(ctx):
